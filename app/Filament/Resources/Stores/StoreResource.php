@@ -40,7 +40,7 @@ class StoreResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            \App\Filament\Resources\Stores\RelationManagers\MotorcyclesRelationManager::class,
         ];
     }
 
