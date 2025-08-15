@@ -2,6 +2,18 @@
 
 return [
 
+    'column_manager' => [
+        'heading' => '欄位',
+        'actions' => [
+            'reset' => [
+                'label' => '重置',
+            ],
+            'apply' => [
+                'label' => '套用',
+            ],
+        ],
+    ],
+
     'column_toggle' => [
 
         'heading' => '欄位',
@@ -20,11 +32,11 @@ return [
                 'collapse_list' => '顯示少 :count 項',
                 'expand_list' => '顯示多 :count 項',
             ],
-
             'more_list_items' => '以及 :count 項更多',
-
         ],
-
+        'select' => [
+            'placeholder' => '全部',
+        ],
     ],
 
     'fields' => [

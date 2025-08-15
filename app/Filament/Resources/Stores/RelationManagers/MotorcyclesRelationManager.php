@@ -18,6 +18,12 @@ class MotorcyclesRelationManager extends RelationManager
 
     protected static ?string $recordTitleAttribute = 'name';
 
+    protected static ?string $title = '機車';
+    protected static ?string $pluralModelLabel = '機車';
+    protected static ?string $pluralLabel = '機車';
+    protected static ?string $modelLabel = '機車';
+    protected static ?string $label = '機車';
+
     public function form(Schema $schema): Schema
     {
         return $schema
