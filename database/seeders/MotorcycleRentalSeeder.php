@@ -98,7 +98,7 @@ class MotorcycleRentalSeeder extends Seeder
                        'model' => 'CYGNUS-X 125',
                        'accessories' => [1, 2, 3], // 安全帽, 雨衣, GPS導航
                        'license_plate' => 'ABC-123',
-                       'price' => 800,
+                       'price' => 180,
                        'status' => 'available'
                    ],
                    [
@@ -107,7 +107,7 @@ class MotorcycleRentalSeeder extends Seeder
                        'model' => 'NEW DINK 125',
                        'accessories' => [1, 2, 4], // 安全帽, 雨衣, 手機架
                        'license_plate' => 'DEF-456',
-                       'price' => 750,
+                       'price' => 180,
                        'status' => 'available'
                    ],
                    [
@@ -116,7 +116,7 @@ class MotorcycleRentalSeeder extends Seeder
                        'model' => 'RACING 150',
                        'accessories' => [1, 2, 5], // 安全帽, 雨衣, 後箱
                        'license_plate' => 'GHI-789',
-                       'price' => 900,
+                       'price' => 200,
                        'status' => 'rented'
                    ],
                    [
@@ -125,7 +125,7 @@ class MotorcycleRentalSeeder extends Seeder
                        'model' => 'CB150R',
                        'accessories' => [1, 3, 4], // 安全帽, GPS導航, 手機架
                        'license_plate' => 'JKL-012',
-                       'price' => 1000,
+                       'price' => 250,
                        'status' => 'available'
                    ],
                    [
@@ -134,7 +134,7 @@ class MotorcycleRentalSeeder extends Seeder
                        'model' => 'GSX-R150',
                        'accessories' => [1, 2, 3, 4], // 安全帽, 雨衣, GPS導航, 手機架
                        'license_plate' => 'MNO-345',
-                       'price' => 1200,
+                       'price' => 250,
                        'status' => 'maintenance'
                    ],
                    [
@@ -143,7 +143,7 @@ class MotorcycleRentalSeeder extends Seeder
                        'model' => 'TIGRA 150',
                        'accessories' => [1, 2, 5], // 安全帽, 雨衣, 後箱
                        'license_plate' => 'PQR-678',
-                       'price' => 850,
+                       'price' => 200,
                        'status' => 'available'
                    ],
         ];
