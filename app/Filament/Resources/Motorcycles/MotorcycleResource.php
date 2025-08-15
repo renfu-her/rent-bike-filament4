@@ -23,7 +23,7 @@ class MotorcycleResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'name';
 
-    protected static string|UnitEnum|null $navigationGroup = '機車管理';
+    protected static string|UnitEnum|null $navigationGroup = '網站管理';
 
     protected static ?int $navigationSort = 2;
 

@@ -23,7 +23,7 @@ class StoreResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'name';
 
-    protected static string|UnitEnum|null $navigationGroup = '商店管理';
+    protected static string|UnitEnum|null $navigationGroup = '網站管理';
 
     protected static ?int $navigationSort = 1;
 
