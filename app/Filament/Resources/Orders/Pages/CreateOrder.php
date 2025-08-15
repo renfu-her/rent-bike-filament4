@@ -18,4 +18,10 @@ class CreateOrder extends CreateRecord
     {
         return '訂單已成功建立';
     }
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        $data['order_no'] = \App\Models\Order::generateOrderNo();
+        return $data;
+    }
 }
