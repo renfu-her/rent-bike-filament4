@@ -19,9 +19,10 @@ class MembersTable
                     ->sortable()
                     ->weight('bold'),
 
-                TextColumn::make('email')
-                    ->label('電子郵件')
+                TextColumn::make('id_number')
+                    ->label('身份證字號')
                     ->searchable()
+                    ->sortable()
                     ->copyable(),
 
                 TextColumn::make('phone')
@@ -29,49 +30,11 @@ class MembersTable
                     ->searchable()
                     ->copyable(),
 
-                TextColumn::make('id_number')
-                    ->label('身份證字號')
+                TextColumn::make('address')
+                    ->label('地址')
                     ->searchable()
-                    ->copyable(),
-
-                TextColumn::make('license_plate')
-                    ->label('駕照號碼')
-                    ->searchable()
-                    ->copyable(),
-
-                TextColumn::make('orders_count')
-                    ->label('訂單數量')
-                    ->counts('orders')
-                    ->sortable(),
-
-                IconColumn::make('is_active')
-                    ->label('啟用狀態')
-                    ->boolean()
-                    ->trueIcon('heroicon-s-check-circle')
-                    ->falseIcon('heroicon-s-x-circle')
-                    ->trueColor('success')
-                    ->falseColor('danger'),
-
-                TextColumn::make('created_at')
-                    ->label('註冊時間')
-                    ->dateTime('Y-m-d H:i:s')
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-
-                TextColumn::make('updated_at')
-                    ->label('更新時間')
-                    ->dateTime('Y-m-d H:i:s')
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->limit(50),
             ])
-            ->filters([
-                TernaryFilter::make('is_active')
-                    ->label('啟用狀態')
-                    ->placeholder('所有狀態')
-                    ->trueLabel('已啟用')
-                    ->falseLabel('已停用')
-                    ->native(false),
-            ])
-            ->defaultSort('created_at', 'desc');
+            ->defaultSort('name', 'asc');
     }
 }
