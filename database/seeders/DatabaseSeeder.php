@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,11 +14,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // 建立管理員帳號（如果不存在）
+        User::firstOrCreate([
+            'email' => 'admin@admin.com',
+        ], [
+            'name' => 'admin',
+            'password' => Hash::make('admin1234'),
+        ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // 執行機車出租相關的 seeder
+        $this->call([
+            MotorcycleRentalSeeder::class,
+            // UpdateStoreStatusSeeder::class, // 如果需要更新現有資料，可以取消註解
         ]);
     }
 }
